@@ -10,9 +10,19 @@
     
     <link rel="stylesheet" href="styling.css" />
     <style>
+      .image-circle {
+        border-radius: 20px;
+        width: 100px;
+        height: 100px;
+        border: 5px;
+        
+        border-color: black;
+        
+      }
+     
       .button {
         border: black;
-        color: black;
+        color: white;
         padding: 15px 32px;
         text-align: center;
         text-decoration: none;
@@ -20,19 +30,17 @@
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
+        opacity: 90%;
+        border-radius: 10px;
       }
-      .button1 {background-color: rgb(243, 241, 131);}
-      .button1:hover {
-        background-color: #776f00;
-        color: white;
+      
+      .votingSection,
+      .listSection {
+        width: fit-content;
+        margin: auto;
+        align-content: baseline;
       }
 
-      .button2 {background-color: greenyellow;}
-
-      .button2:hover {
-        background-color: #56660e;
-        color: white;
-      }
     </style>
 
     <title>Digital Voting</title>
@@ -45,7 +53,7 @@
       <li class ="navelement"><a class="active" href="#home">Team Crypto</a></li>
       <li class ="navelement"><a class="passive" href="./Candidates.html">Candidates</a></li>
       <li class ="navelement"> <a class="passive" href="https://opensea.io/assets/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/58904877837077307509688575795210165494441330556937238074489305874870900359169">Buy our NFTs</a></li>
-      <li class ="navelement"><a class="passive">Blockchain Wallet Details</a></li>
+      <li class ="navelement"><a class="passive" href="./userProfile.html">Blockchain Voter Details</a></li>
     </ul>
 
     <div id="txStatus"></div>
@@ -64,7 +72,7 @@
           <img
             src="logo1.PNG"
             alt="d"
-            class="rounded-circle logo border border-ligh"
+            class="image-circle"
           />
           <label class="form-check-label ms-3" for="ronal"><h1>Ronal Reagen </h1></label>
         </div>
@@ -80,7 +88,7 @@
           <img
             src="logo2.PNG"
             alt="d"
-            class="rounded-circle logo border border-ligh"
+            class="image-circle"
           />
           <label class="form-check-label ms-3" for="abraham"><h1> Abraham Lincoln </h1></label>
         </div>
@@ -96,7 +104,7 @@
           <img
             src="logo3.PNG"
             alt="d"
-            class="rounded-circle logo border border-ligh"
+            class="image-circle"
           />
           <label class="form-check-label ms-3" for="abstain"><h1> Abstain </h1></label>
         </div>
@@ -105,17 +113,15 @@
       </div>
 
       <br><br>
-      <button type="submit" id="vote">
-        Caste Your Vote
+      <div class="listSection">
+      <button type="submit" id="vote" class="button">
+        Cast Your Vote
       </button><br><br>
 
-      <button type="submit" id="summary">
+      <button type="submit" id="summary" class="button">
         Vote Distribution
       </button><br><br>
-
-      <button type="submit" id="result">
-        Declare Winner
-      </button><br><br>
+      </div>
 
       <hr class="hr-text" data-content="OR" />
 
@@ -170,34 +176,6 @@
     <script src="./index.js"></script>
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- <script>
-      window.onload = function() {
-        
-
-        candidates = getCandidateList();
-        console.log("cand="+candidates);
-
-        var div = document.getElementById(newCandidates);
-        //div.innerHTML = '';
-
-        for(var i = 0; i < candidates.length; i++) {
-          div.innerHTML += '<div><input class="form-check-input mt-3" type="radio" name="flexRadioDefault" value="' +i+ ' "></input>' + candidates[i] + '</div>';
-        }
-
-      };
-
-      $("#refreshCandidateList").click(function () {
-          var candidates = getCandidateList();
-          console.log('cand list='+candidates);
-
-         div = document.getElementById(newCandidates);
-          document.getElementById(newCandidates).innerHTML = '';
-
-          for(var i = 0; i < candidates.length; i++) {
-            document.getElementById(newCandidates).innerHTML += '<div><input class="form-check-input mt-3" type="radio" name="flexRadioDefault" value="' +i+ ' "></input>' + candidates[i] + '</div>';
-          }
-          });
-    </script> -->
 
   </body>
 </html>

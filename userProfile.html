@@ -24,6 +24,32 @@
     />
     
     <link rel="stylesheet" href="styling.css" />
+    <style>
+      .accountDetails {
+      width: fit-content;
+      margin: auto;
+      align-content: baseline;
+    }
+
+    div {
+
+  padding: 8px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+    </style>
+
     <title>EVoting</title>
   </head>
   <body background = "background-image-blockchain.jpg">
@@ -32,23 +58,23 @@
       <li class ="navelement"><a class="active" href="#home">Team Crypto</a></li>
       <li class ="navelement"><a class="passive" href="./Candidates.html">Candidates</a></li>
       <li class ="navelement"> <a class="passive" href="https://opensea.io/assets/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/58904877837077307509688575795210165494441330556937238074489305874870900359169">Buy our NFTs</a></li>
-      <li class ="navelement"><a class="passive" href="./userProfile.html">Blockchain Voter Details</a></li>
+      <li class ="navelement"><a class="passive" href="./userProfile.html">Blockchain User Details</a></li>
     </ul>
 
-    <div id="txStatus"></div>
+    <br><br><br><br>
 
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname"><br><br>
-    Do you want to register yourself as candidate? <br><br>
-    <input type="radio" id="confirm" name="confirm">Yes
-    <input type="radio" id="confirm" name="confirm">No<br><br>
-    <input type="checkbox">Accept all terms and conditions.<br><br>
+    <div id="txStatus" class="accountDetails">
+      <h1><label for="voterAccount" id="voterAccount">Voter:</label></body></h1>
+   <p> <h3><label for="vAccountvalue" id="vAccountvalue"></label></h3></p>
 
-    <button type="submit" id="registerCandidate" class="me-5 btn btn-outline-warning" onclick="registerCandidate()">
-      Register candidate
-    </button>
+    </div>
+    <br><br>
+
+    <div id="txStatus" class="accountDetails">
+     <h1> <label for="ether">Ether:</label><br></h1>
+      <p><h3><label for="voterEtherValue" id="voterEtherValue"></label></h3></p>
+    </div>
+
 
     <!-- script -->
     <script src="./index.js"></script>
